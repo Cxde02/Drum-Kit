@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.keys {
+  position: relative;
+  border: 1px solid black;
+  height: 100px;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.07s;
+}
+
+.key {
+  height: 60px;
+  width: 60px;
+  font-size: 24px;
+  /*line-height: 50px;*/
+  text-align: center;
+  color: rgb(0, 0, 0);
+  background-color: grey;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.07s;
+}
+
+.sound {
+  font-size: 10px;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: green;
+  box-shadow: 0 0 30px green;
+}
