@@ -24,3 +24,14 @@ function removeTransition(e) {
 const keys = document.querySelectorAll(".key");
 //keys.addEventListener('transitionend');
 keys.forEach((key) => key.addEventListener("transitionend", removeTransition));
+
+const errorText = document.getElementById("errorText");
+
+keys.forEach((key) => {
+  key.addEventListener("click", () => {
+    errorText.textContent = "Use the keyboard only!!!";
+    setTimeout(() => {
+      errorText.textContent = "";
+    }, 1000); // Set the timeout to 1000 milliseconds (1 second)
+  });
+});
