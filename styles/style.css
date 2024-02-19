@@ -1,3 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+* {
+  margin: 0;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent background blur from affecting scrollbars */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg.jpg");
+  background-size: cover;
+  /*filter: blur(3px);*/
+  z-index: -1;
+}
+
+.title {
+  text-align: center;
+  transform: translateY(10rem);
+  color: white;
+  font-family: "Great Vibes", cursive;
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -18,27 +55,35 @@
 }
 
 .key {
-  height: 60px;
-  width: 60px;
-  font-size: 24px;
-  /*line-height: 50px;*/
+  height: 70px;
+  width: 70px;
+  font-size: 27px;
+  font-family: "Playfair Display", serif;
+  color: #07ffff;
+  /*line-height: 50px;
+  */
   text-align: center;
-  color: rgb(0, 0, 0);
-  background-color: grey;
-  border: 1px solid black;
+  background-color: rgb(116, 116, 116, 0.4);
+  border: 2px solid #07ffff;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: all 0.07s;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
 
 .sound {
   font-size: 10px;
+  text-transform: uppercase;
 }
 
 .playing {
   transform: scale(1.1);
-  border-color: green;
-  box-shadow: 0 0 30px green;
+  border-color: #ff6bf9;
+  box-shadow: 0 0 10px #ff6bf9;
 }
